@@ -1,0 +1,20 @@
+{
+  "name": "day-4",
+  "version": "1.0.0",
+  "description": "Starting a new project backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "javascirpt",
+    "backend"
+  ],
+  "author": "gourav sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
