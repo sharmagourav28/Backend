@@ -28,13 +28,13 @@ const registerUser = asyncHandler(async (req, res) => {
   // }
 
   if (
-    [fullName, email, username, password].some((filed) => filed?.trim() === "")
+    [fullName, email, username, password].some((field) => field?.trim() === "")
   ) {
     throw new ApiError(400, "All fileds are required");
   }
   // register form validation check kar rha  h
 
-  const existeduser = User.findOne({
+  const existeduser = await User.findOne({
     $or: [{ username }, { email }],
   });
   //  dekh rha h ki user already register h ki nhi
